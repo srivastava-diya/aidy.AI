@@ -1,0 +1,176 @@
+{
+  "total_records": 500,
+  "numeric_summary": {
+    "tokens_used": {
+      "count": 500.0,
+      "mean": 4246.394,
+      "std": 2144.854,
+      "min": 507.0,
+      "25%": 2573.5,
+      "50%": 4236.5,
+      "75%": 6088.25,
+      "max": 7996.0
+    },
+    "duration_s": {
+      "count": 500.0,
+      "mean": 63.613,
+      "std": 33.328,
+      "min": 5.6,
+      "25%": 33.95,
+      "50%": 65.2,
+      "75%": 92.4,
+      "max": 119.9
+    },
+    "quality_score": {
+      "count": 500.0,
+      "mean": 0.798,
+      "std": 0.113,
+      "min": 0.6,
+      "25%": 0.703,
+      "50%": 0.801,
+      "75%": 0.892,
+      "max": 1.0
+    },
+    "errors": {
+      "count": 500.0,
+      "mean": 0.1,
+      "std": 0.35,
+      "min": 0.0,
+      "25%": 0.0,
+      "50%": 0.0,
+      "75%": 0.0,
+      "max": 2.0
+    }
+  },
+  "role_performance": [
+    {
+      "agent_role": "Editor",
+      "count": 100,
+      "mean_quality": 0.8071,
+      "std_quality": 0.1136,
+      "median_quality": 0.814,
+      "mean_duration": 59.301,
+      "mean_tokens": 3724.48,
+      "error_count": 10,
+      "error_rate": 0.08
+    },
+    {
+      "agent_role": "Fact_Checker",
+      "count": 92,
+      "mean_quality": 0.8069,
+      "std_quality": 0.1155,
+      "median_quality": 0.8285,
+      "mean_duration": 60.2424,
+      "mean_tokens": 3994.0543,
+      "error_count": 3,
+      "error_rate": 0.0326
+    },
+    {
+      "agent_role": "Publisher",
+      "count": 99,
+      "mean_quality": 0.7856,
+      "std_quality": 0.1163,
+      "median_quality": 0.785,
+      "mean_duration": 59.6172,
+      "mean_tokens": 4421.4444,
+      "error_count": 13,
+      "error_rate": 0.101
+    },
+    {
+      "agent_role": "Researcher",
+      "count": 116,
+      "mean_quality": 0.7991,
+      "std_quality": 0.107,
+      "median_quality": 0.795,
+      "mean_duration": 68.8267,
+      "mean_tokens": 4601.7931,
+      "error_count": 15,
+      "error_rate": 0.1207
+    },
+    {
+      "agent_role": "Writer",
+      "count": 93,
+      "mean_quality": 0.7927,
+      "std_quality": 0.1164,
+      "median_quality": 0.786,
+      "mean_duration": 69.3344,
+      "mean_tokens": 4427.5806,
+      "error_count": 9,
+      "error_rate": 0.0753
+    }
+  ],
+  "topic_performance": [
+    {
+      "task_type": "AI_Trends",
+      "count": 88,
+      "mean_quality": 0.821,
+      "mean_duration": 64.3943,
+      "mean_tokens": 4367.9205,
+      "error_count": 12
+    },
+    {
+      "task_type": "Climate_Tech",
+      "count": 94,
+      "mean_quality": 0.7876,
+      "mean_duration": 58.9096,
+      "mean_tokens": 4206.4787,
+      "error_count": 10
+    },
+    {
+      "task_type": "FinTech",
+      "count": 99,
+      "mean_quality": 0.7956,
+      "mean_duration": 65.4374,
+      "mean_tokens": 4428.2121,
+      "error_count": 12
+    },
+    {
+      "task_type": "HealthAI",
+      "count": 119,
+      "mean_quality": 0.7992,
+      "mean_duration": 65.9882,
+      "mean_tokens": 3939.958,
+      "error_count": 10
+    },
+    {
+      "task_type": "Market_Analysis",
+      "count": 100,
+      "mean_quality": 0.7899,
+      "mean_duration": 62.714,
+      "mean_tokens": 4361.63,
+      "error_count": 6
+    }
+  ],
+  "correlation_matrix": {
+    "tokens_used": {
+      "tokens_used": 1.0,
+      "duration_s": -0.0332,
+      "quality_score": 0.0072,
+      "errors": -0.0665
+    },
+    "duration_s": {
+      "tokens_used": -0.0332,
+      "duration_s": 1.0,
+      "quality_score": -0.0489,
+      "errors": -0.0367
+    },
+    "quality_score": {
+      "tokens_used": 0.0072,
+      "duration_s": -0.0489,
+      "quality_score": 1.0,
+      "errors": 0.0486
+    },
+    "errors": {
+      "tokens_used": -0.0665,
+      "duration_s": -0.0367,
+      "quality_score": 0.0486,
+      "errors": 1.0
+    }
+  },
+  "interpretations": [
+    "Insight 1 (Quality by Role): Editors and Writers exhibit marginally higher median quality scores (~0.81-0.83), reflecting polishing steps, whereas Researchers encounter greater variability due to information retrieval unpredictability.",
+    "Insight 2 (Duration vs Quality): No significant linear relationship exists between execution duration and quality score (correlation r ~ 0.02). Fast executions achieve high quality when retrieved sources are concise and authoritative, whereas extended runtimes often result from retry loops and network latency rather than increased thoroughness.",
+    "Insight 3 (Token & Error Distribution): Tokens are uniformly distributed across agents (~4,200 tokens average), indicating consistent prompt budgets. Errors are concentrated in 8.4% of total runs (34 single errors, 8 dual errors), demonstrating that failure is predominantly episodic rather than systemic.",
+    "Cautionary Note: Observational correlations do not establish causal mechanisms. Model temperature, network throttling, and target domain complexity simultaneously modulate agent metrics."
+  ]
+}

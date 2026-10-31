@@ -1,0 +1,137 @@
+{
+  "report": {
+    "initial_row_count": 500,
+    "final_row_count": 500,
+    "schema_issues": [],
+    "missing_values_detected": {
+      "run_id": 0,
+      "agent_role": 0,
+      "task_type": 0,
+      "tokens_used": 0,
+      "duration_s": 0,
+      "quality_score": 0,
+      "errors": 0
+    },
+    "total_missing": 0,
+    "duplicates_flagged": 32,
+    "outliers_flagged": 0,
+    "anomalies_flagged": 101,
+    "cleaning_rationale": [
+      "Preserved all 500 original records to maintain full dataset integrity.",
+      "Converted token, duration, and score columns to explicit numeric types with range bounds.",
+      "Retained statistical outliers while tagging them with 'is_outlier' column rather than discarding.",
+      "Labelled operational anomalies (errors > 0 or quality < 0.65) to assist multi-agent health tracking.",
+      "Computed derived metric 'quality_per_minute' for agent efficiency benchmarking."
+    ]
+  },
+  "metrics": {
+    "total_records": 500,
+    "mean_duration_s": 63.61,
+    "median_duration_s": 65.2,
+    "std_duration_s": 33.33,
+    "mean_quality_score": 0.7983,
+    "median_quality_score": 0.801,
+    "std_quality_score": 0.1134,
+    "mean_tokens_used": 4246.4,
+    "median_tokens_used": 4236.5,
+    "total_tokens_used": 2123197,
+    "total_errors": 50,
+    "runs_with_errors": 42,
+    "error_rate": 0.084,
+    "task_completion_rate": 0.69,
+    "by_agent_role": [
+      {
+        "agent_role": "Editor",
+        "runs": 100,
+        "avg_quality": 0.8071,
+        "median_quality": 0.814,
+        "avg_duration": 59.301,
+        "avg_tokens": 3724.48,
+        "error_count": 10,
+        "error_rate": 0.08
+      },
+      {
+        "agent_role": "Fact_Checker",
+        "runs": 92,
+        "avg_quality": 0.8069,
+        "median_quality": 0.8285,
+        "avg_duration": 60.2424,
+        "avg_tokens": 3994.0543,
+        "error_count": 3,
+        "error_rate": 0.0326
+      },
+      {
+        "agent_role": "Publisher",
+        "runs": 99,
+        "avg_quality": 0.7856,
+        "median_quality": 0.785,
+        "avg_duration": 59.6172,
+        "avg_tokens": 4421.4444,
+        "error_count": 13,
+        "error_rate": 0.101
+      },
+      {
+        "agent_role": "Researcher",
+        "runs": 116,
+        "avg_quality": 0.7991,
+        "median_quality": 0.795,
+        "avg_duration": 68.8267,
+        "avg_tokens": 4601.7931,
+        "error_count": 15,
+        "error_rate": 0.1207
+      },
+      {
+        "agent_role": "Writer",
+        "runs": 93,
+        "avg_quality": 0.7927,
+        "median_quality": 0.786,
+        "avg_duration": 69.3344,
+        "avg_tokens": 4427.5806,
+        "error_count": 9,
+        "error_rate": 0.0753
+      }
+    ],
+    "by_task_type": [
+      {
+        "task_type": "AI_Trends",
+        "runs": 88,
+        "avg_quality": 0.821,
+        "avg_duration": 64.3943,
+        "avg_tokens": 4367.9205,
+        "error_count": 12
+      },
+      {
+        "task_type": "Climate_Tech",
+        "runs": 94,
+        "avg_quality": 0.7876,
+        "avg_duration": 58.9096,
+        "avg_tokens": 4206.4787,
+        "error_count": 10
+      },
+      {
+        "task_type": "FinTech",
+        "runs": 99,
+        "avg_quality": 0.7956,
+        "avg_duration": 65.4374,
+        "avg_tokens": 4428.2121,
+        "error_count": 12
+      },
+      {
+        "task_type": "HealthAI",
+        "runs": 119,
+        "avg_quality": 0.7992,
+        "avg_duration": 65.9882,
+        "avg_tokens": 3939.958,
+        "error_count": 10
+      },
+      {
+        "task_type": "Market_Analysis",
+        "runs": 100,
+        "avg_quality": 0.7899,
+        "avg_duration": 62.714,
+        "avg_tokens": 4361.63,
+        "error_count": 6
+      }
+    ]
+  }
+}

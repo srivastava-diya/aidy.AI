@@ -1,0 +1,8 @@
+column_name,data_type,sample_value_1,sample_value_2,sample_value_3,nullable,valid_range,description
+run_id,string (object),R111,R132,R052,No,R001-R200,"Alphanumeric unique identifier for an orchestrated multi-agent research run batch or session."
+agent_role,string (category),Writer,Researcher,Fact_Checker,No,"Researcher, Fact_Checker, Analyst, Writer, Editor, Publisher","The designated persona/role assumed by the autonomous agent executing the designated subtask."
+task_type,string (category),AI_Trends,Market_Analysis,HealthAI,No,"AI_Trends, Market_Analysis, HealthAI, Climate_Tech, FinTech","Domain topic or task category defining the subject matter and research scope."
+tokens_used,integer (int64),1845,7330,7254,No,507 - 7996,"Total count of prompt and completion LLM tokens consumed during the execution of the agent task."
+duration_s,float (float64),59.2,101.3,84.4,No,5.6 - 119.9,"Total execution runtime for the agent's task measured in seconds from dispatch to output emission."
+quality_score,float (float64),0.89,0.897,0.718,No,0.600 - 1.000,"Standardized evaluation metric assessing factual alignment, coherence, and structural completeness on a [0.0 - 1.0] scale."
+errors,integer (int64),1,0,0,No,0 - 2,"Count of retries, unhandled exceptions, or validation warnings encountered during task execution (0=clean, 1-2=retried/recovered)."

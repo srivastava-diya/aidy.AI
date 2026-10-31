@@ -1,0 +1,8 @@
+column_name,data_type,sample_value_1,sample_value_2,sample_value_3,nullable,description_fill_in
+run_id,object/numeric,R111,R132,R052,No,run_id — [Learner to fill in description]
+agent_role,object/numeric,Writer,Writer,Researcher,No,agent_role — [Learner to fill in description]
+task_type,object/numeric,AI_Trends,Market_Analysis,HealthAI,No,task_type — [Learner to fill in description]
+tokens_used,object/numeric,1845,7330,7254,No,tokens_used — [Learner to fill in description]
+duration_s,object/numeric,59.2,101.3,84.4,No,duration_s — [Learner to fill in description]
+quality_score,object/numeric,0.89,0.897,0.718,No,quality_score — [Learner to fill in description]
+errors,object/numeric,1,0,0,No,errors — [Learner to fill in description]

@@ -1,0 +1,24 @@
+Dataset Generation Prompt
+Project: Multi-Agent Research Assistant with CrewAI
+Domain : Agentic AI / Python
+------------------------------------------------------------
+
+USE THIS PROMPT WITH ChatGPT / Claude / Gemini to generate additional rows:
+
+"Generate 200 synthetic multi-agent research run logs across 20 topics with realistic token counts and quality scores"
+
+ADDITIONAL INSTRUCTIONS FOR AI TOOL:
+- Generate the result as a CSV with the exact same columns as dataset.csv
+- Use realistic value ranges (not all zeros or random text)
+- Maintain consistent data types per column
+- Label anomalies / faults at approx 2-5% of rows (if applicable)
+- Ensure timestamps are sequential and formatted as YYYY-MM-DD HH:MM:SS
+
+COLUMNS in dataset.csv:
+run_id, agent_role, task_type, tokens_used, duration_s, quality_score, errors
+
+CURRENT ROW COUNT: 500 rows
+SUGGESTED ADDITIONAL ROWS TO GENERATE: 4500 (to reach 5,000 total)
+
+ETHICAL NOTE:
+Multi-agent systems can generate and propagate misinformation. Implement fact-check agent with source citation. Human review mandatory before publishing.
